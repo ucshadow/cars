@@ -11,13 +11,13 @@
 	<div class="cars_container">
 	 {{ # each cars }}
 		 <a href="{{ pathFor route='gameScreen' }}">
-			<div class="car_container" name="{{ name }}" id="{{ name }}">
+			<div class="car_container" name="{{ name }}">
 				<img class="car_picture" src="{{ picture }}">
 				<p class="stats">Speed: {{ speed }}</p>
 				<p class="stats">Acceleration: {{ acceleration }}</p>
 				<p class="stats">Maneuverability: {{ maneuverability }}</p>
 				<p class="stats">Popularity: {{ popularity }}</p>
-				<p class="stats">Available: {{ available }}</p>
+				<p class="stats" id="{{ name }}">Available: {{ timer }}</p>
 			</div>
 		</a>
 	{{ /each }}
@@ -26,4 +26,9 @@
 
 <template name="gameScreen">
 	<p> You are now on the game screen</p>
+	<p> {{ obj }}</p>
+</template>
+
+<template name="getInput">
+	<p>Input is --> {{ input }}</p>
 </template>
