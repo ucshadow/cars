@@ -1,0 +1,1 @@
+Cars.insert({ name: "black", speed: 7, acceleration: 5,  maneuverability: 2, popularity: 2, available: "yes", picture: "http://i.imgur.com/TV2JEZa.jpg" })

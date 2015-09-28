@@ -1,0 +1,29 @@
+<template name="homescreenMenu">
+	<div class="home_menu">
+		<a  href="{{ pathFor route = 'try'}}"> TRY </a>
+	    <a  href="http://google.ro"> WATCH </a>
+	    <a  href="http://google.ro"> LOGIN </a>
+	    <a  href="http://google.ro"> REGISTER </a>
+    </div>
+</template>
+
+<template name="try">
+	<div class="cars_container">
+	 {{ # each cars }}
+		 <a href="{{ pathFor route='gameScreen' }}">
+			<div class="car_container" name="{{ name }}" id="{{ name }}">
+				<img class="car_picture" src="{{ picture }}">
+				<p class="stats">Speed: {{ speed }}</p>
+				<p class="stats">Acceleration: {{ acceleration }}</p>
+				<p class="stats">Maneuverability: {{ maneuverability }}</p>
+				<p class="stats">Popularity: {{ popularity }}</p>
+				<p class="stats">Available: {{ available }}</p>
+			</div>
+		</a>
+	{{ /each }}
+	</div>
+</template>
+
+<template name="gameScreen">
+	<p> You are now on the game screen</p>
+</template>
